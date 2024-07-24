@@ -60,6 +60,8 @@ export const defaultNftConfig = {
     /** Set this to true to prevent removal of console method calls inside of the child iframe. */
     allowConsoleLogs: undefined as boolean | undefined,
     hideError: undefined as boolean | undefined,
+    /** Set this to true disable scaling feature on HTML NFTs */
+    disableHTMLScaling: undefined as boolean | undefined,
 } as const;
 
 type RequiredConfigKeys = 'nftUrl' | 'childFrameUrl';

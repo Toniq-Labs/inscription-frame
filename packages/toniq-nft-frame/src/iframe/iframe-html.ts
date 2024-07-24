@@ -118,14 +118,16 @@ function setScaledNftSize(
     }
 
     if (dimensionScales && (dimensionScales.height !== 1 || dimensionScales.width !== 1)) {
-        htmlElement.querySelector('body')!.style.setProperty(
-            'transform',
-            [
-                `scaleX(${dimensionScales.width})`,
-                `scaleY(${dimensionScales.height})`,
-            ].join(' '),
-        );
-        htmlElement.classList.add('scaled');
+        if (!nftConfig.disableHTMLScaling) {
+            htmlElement.querySelector('body')!.style.setProperty(
+                'transform',
+                [
+                    `scaleX(${dimensionScales.width})`,
+                    `scaleY(${dimensionScales.height})`,
+                ].join(' '),
+            );
+            htmlElement.classList.add('scaled');
+        }
     }
 
     return newNftDimensions;
