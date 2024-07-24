@@ -9,7 +9,8 @@ const extraDevServerConfig = {
     host: '127.0.0.1',
     port: 5283,
     headers: {
-        'Content-Security-Policy': "default-src 'unsafe-inline' localhost:5284 'self' blob: data:",
+        'Content-Security-Policy':
+            "default-src 'unsafe-inline' 'unsafe-eval' localhost:5284 'self' blob: data:",
     },
 } as const;
 
