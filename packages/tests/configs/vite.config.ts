@@ -29,7 +29,7 @@ export default defineConfig({forGitHubPages: false}, async (baseConfig) => {
         port: 5283,
         headers: {
             'Content-Security-Policy':
-                "default-src 'unsafe-inline' localhost:5284 'self' blob: data:",
+                "default-src 'unsafe-inline' 'unsafe-eval' localhost:5284 'self' blob: data:",
         },
     } as const;
 

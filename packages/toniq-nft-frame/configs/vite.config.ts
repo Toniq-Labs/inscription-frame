@@ -34,7 +34,8 @@ export default defineConfig({forGitHubPages: false}, async (baseConfig) => {
               }
             : {
                   headers: {
-                      'Content-Security-Policy': "default-src 'unsafe-inline' 'self' blob: data:",
+                      'Content-Security-Policy':
+                          "default-src 'unsafe-inline' 'unsafe-eval' 'self' blob: data:",
                   },
               }),
     } as const;
